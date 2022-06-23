@@ -1,3 +1,6 @@
+void TextColor(int colornum) {                          //텍스트 컬러 변경
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), colornum);
+}
 void main_ui_1() {
 	printf("====================================================================================================================================================================\n");
 	printf("                                                                                                                                                                    \n");
@@ -32,9 +35,9 @@ void main_ui_1() {
 	printf("                                                                                                                                                                       \n");
 	printf("                                                                                                                                                                       \n");
 	printf("                                                                                                                                                                       \n");
-	printf("                                                                                                                                                                       \n");
-	printf("                                                                      press ant key                                                                                      \n");
-	printf("                                                                                                                                                                       \n");
+	printf("                                                                     -----------------                                                                                                \n");
+	printf("                                                                       press any key                                                                                    \n");
+	printf("                                                                     -----------------                                                                                                   \n");
 	printf("                                                                                                                                                                       \n");
 	printf("                                                                                                                                                                       \n");
 	printf("                                                                                                                                                                       \n");
@@ -77,9 +80,11 @@ void main_ui_2() {
 	printf("                                                                                                                                                                       \n");
 	printf("                                                                                                                                                                       \n");
 	printf("                                                                                                                                                                       \n");
-	printf("                                                                                                                                                                       \n");
-	printf("                                                                      press ant key                                                                                      \n");
-	printf("                                                                                                                                                                       \n");
+	printf("                                                                     -----------------                                                                                                \n");
+	TextColor(8);
+	printf("                                                                       press any key                                                                                  \n");
+	TextColor(15);
+	printf("                                                                     -----------------                                                                                                   \n");
 	printf("                                                                                                                                                                       \n");
 	printf("                                                                                                                                                                       \n");
 	printf("                                                                                                                                                                       \n");

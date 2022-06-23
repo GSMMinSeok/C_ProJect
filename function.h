@@ -7,5 +7,6 @@ void Stone_Soul();
 void Stone_pic();
 void gotoxy(int x, int y);
 void Game_clear();
-
+void playingBgm();
+void Stone_Market();
 //인피니티 건틀렛 함수
