@@ -9,6 +9,7 @@
 #include"stone_design.h"
 #include"function.h"
 #include"stone_UI.h"
+#include"stone_Gauntlet.h"
 #pragma comment (lib, "winmm.lib")
 #include <mmsystem.h>;
 

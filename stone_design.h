@@ -1,14 +1,61 @@
 typedef struct pictures {
     int i;      // 문자열이 몇 줄인지
-    char pic[100][100];     // 그림을 수용할 수 있는 최대 크기
+    char pic[200][200];     // 그림을 수용할 수 있는 최대 크기
 } Stone_design;
 
-Stone_design p0 = { 1, {"■" } };
-
-Stone_design p1 = { 2, {"■■",
-                        "■■"
+Stone_design p0 = { 1, {"■" ,
 } };
-Stone_design p2 = { 13, {
+
+Stone_design p1 = { 1, {
+         "               ■■               ",
+         "               ■■                   ",
+} };
+Stone_design p2 = { 8, {
+    "         ■■■■■■               ",
+    "     ■■            ■             ",
+    "   ■                  ■           ",
+    "   ■                    ■         ",
+    "   ■                    ■         ",
+    "   ■                    ■         ",
+    "     ■                ■           ",
+    "       ■■■■■■■■             "
+} };
+Stone_design p3 = { 10, {
+    "      ■■                       ",
+    "     ■■■                      ",
+    "    ■○■■                     ",
+    "   ■■■■■                    ",
+    "    ■■○■■                   ",
+    "     ■■■■■                  ",
+    "      ■■○■■                 ",
+    "       ■■■■                  ",
+    "        ■■■                   ",
+    "         ■■                   ",
+} };
+
+
+Stone_design p4 = { 5, {
+    "             _--_               ",
+    "          _-      -_            ",
+    "       _-     ♨     -_         ",
+    "        -_          _-          ",
+    "           -_____--             "
+} };
+
+Stone_design p5 = { 10, {
+    "                  ■             ",
+    "                  ■             ",
+    "                  ■             ",
+    "                  ■             ",
+    "       ■■■■■■■            ",
+    "      ■■■■■■■■           ",
+    "       □□□□□□□            ",
+    "      ■■■■■■■■           ",
+    "      ■■■■■■■■           ",
+    "       ■■■■■■■            "
+} };
+
+Stone_design p8 = { 13, {
     "                         ■■■■■       ",
     "                        ■        ■      ",
     "                       ■ ■    ■  ■    ",
@@ -24,7 +71,7 @@ Stone_design p2 = { 13, {
     "                       ■■■■■■■     "
 } };
 
-Stone_design p3 = { 12, {
+Stone_design p6 = { 12, {
     "                                         ■■         ",
     "                                        ■■■        ",
     "                                        ■■■        ",
@@ -38,7 +85,8 @@ Stone_design p3 = { 12, {
     "                                     ■■■■■■     ",
     "                                  ■■         ■■   "
 } };
-Stone_design p4 = { 13, {
+
+Stone_design p7 = { 13, {
     "□□□□                                            □□□□",
     "■■■■                                            ■■■■",
     "■■□□                                            □□■■",
@@ -54,27 +102,9 @@ Stone_design p4 = { 13, {
     "                       ■■  ■  ■■                       "
 } };
 
-Stone_design p5 = { 17, {
-    "                             ■■■■■■■■",
-    "                         ■■         ■   ■",
-    "                     ■■ □□□□□■     ■",
-    "                   ■            ■   □   ■",
-    "                 ■            ■      □  ■",
-    "               ■            ■ □      □ ■",
-    "             ■□□□□□□■    □      ■  ",
-    "           ■            ■       □     ■  ",
-    "           ■          ■□        □    ■  ",
-    "           ■        ■  □         □ ■    ",
-    "         ■        ■     □         ■      ",
-    "         ■      ■        □      ■        ",
-    "         ■    ■ □        □   ■          ",
-    "       ■    ■    □        □■            ",
-    "       ■  ■       □     ■■              ",
-    "       ■■          □■■                  ",
-    "       ■■■■■■■■                      "
-} };
 
-Stone_design p6 = { 16,
+
+Stone_design p9 = { 16,
  {
     "                              ■■■■■■     ",
     "                        ■■■            ■   ",
@@ -94,7 +124,7 @@ Stone_design p6 = { 16,
     "                ■■■■■■■                 "
  } };
 
-Stone_design p7 = { 17,
+Stone_design p10 = { 17,
 {
 "               DE6O               ",
 "                pZOQ              ",
@@ -115,7 +145,7 @@ Stone_design p7 = { 17,
 "        ::ss61  ..JUJs::          "
 } };
 
-Stone_design p8 = { 23, {
+Stone_design p11 = { 23, {
     "                               ■                           ",
     "                              ■■                          ",
     "             ■                ■■             ■          ",
@@ -140,7 +170,7 @@ Stone_design p8 = { 23, {
     "                             ■■                           ",
     "                              ■                            "
 } };
-Stone_design p9 = { 36, {
+Stone_design p12 = { 36, {
 "                   .7PQBBBQBQBBBBBEJ.              ",
 "               rDBBBBBBBBBBBBBBBBBBBBG:            ",
 "             sBBBBBMBQBBBQBQBQBQQRBBBBBBr          ",
@@ -178,7 +208,25 @@ Stone_design p9 = { 36, {
 "                     ,;rv7svLsJ7;:                "
 } };
 
-Stone_design p10 = { 14, {
+Stone_design p13 = { 16,{
+    "                                                                                          ",
+    "                                                                                                ",
+    "      ■■                      ■■                                 ■■                             ",
+    "      ■■                      ■■                                 ■■                          ",
+    "                                ■■                                 ■■                               ",
+    "      ■■                      ■■                                 ■■                             ",
+    "      ■■            ■■■■■■■        ■■■■■■■           ■■                                        ",
+    "      ■■            ■■■■■■■        ■■■■■■■           ■■                         ",
+    "      ■■        ■■          ■■      ■■          ■■         ■■                             ",
+    "      ■■        ■■          ■■      ■■          ■■         ■■                             ",
+    "      ■■        ■■          ■■      ■■          ■■         ■■                           ",
+    "      ■■        ■■          ■■      ■■          ■■         ■■                             ",
+    "      ■■        ■■          ■■      ■■          ■■         ■■                            ",
+    "      ■■            ■■■■■■■        ■■■■■■■           ■■                       ",
+    "      ■■            ■■■■■■■        ■■■■■■■           ■■                        ",
+    "                                                                                                   "
+} };
+Stone_design p14 = { 14, {
     "                             ■■■                                      ",
     "                            ■    ■                                     ",
     "                             ■  ■                                      ",
@@ -195,7 +243,7 @@ Stone_design p10 = { 14, {
     "                               ▼                                        "
  } };
 
-Stone_design p11 = { 14, {
+Stone_design p15 = { 14, {
     "                             ■■■                                      ",
     "                            ■    ■                                     ",
     "                             ■  ■                                      ",
@@ -212,12 +260,12 @@ Stone_design p11 = { 14, {
     "                               ▼                                        "
                         } };
 
-Stone_design p12 = { 19, {
-    "            ■■■■           ■■■■                                ",
-    "          ■        ■       ■ ★     ■                             ",
-    "          ■   ★   ■       ■        ■                             ",
-    "          ■        ■       ■     ★ ■                             ",
-    "            ■■■■           ■■■■                               ",
+Stone_design p16 = { 19, {
+    "              ■■■■             ■■■■                           ",
+    "            ■        ■         ■ ★     ■                         ",
+    "            ■   ★   ■         ■        ■                         ",
+    "            ■        ■         ■     ★ ■                         ",
+    "              ■■■■             ■■■■                           ",
     "                                                                      ",
     "                                                                      ",
     "    ■■■■              ■■■■              ■■■■              ",
@@ -234,7 +282,7 @@ Stone_design p12 = { 19, {
     "             ■■■■                 ■■■■                        "
 } };
 
-Stone_design p13 = { 45, {
+Stone_design p17 = { 45, {
 "                                    ,;isJ7irJc;r:,.                              ",
 "                                 :X6Z2Usi7rrH6Jc5JKXJvv:                         ",
 "                               ,JgK5U5Jrrs7rrHJ7vJrss7cUci.                      ",
@@ -281,4 +329,15 @@ Stone_design p13 = { 45, {
 "  RQBBBBBBBBBBBBBBBBBBBBBBBRRDgDRRQQBBBQBBBBBBBBBBBBBBBQBBBBBBBBBBBBBBBBBBBBBRc  "
 } };
 
-
+void up_stone() {
+    printf("     ■■■■■■■                                  \n");
+    printf("   ■             ■                    \n");
+    printf("  ■      ■■■    ■                         \n");
+    printf(" ■       ■        ■                   \n");
+    printf(" ■       ■■■     ■                       \n");
+    printf(" ■       ■  ■      ■                     \n");
+    printf(" ■       ■■■     ■                        \n");
+    printf("  ■               ■■                          \n");
+    printf("  ■■■■■■■■■                    \n");
+  
+}

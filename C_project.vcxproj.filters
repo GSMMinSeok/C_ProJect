@@ -38,5 +38,8 @@
     <ClInclude Include="stone_design.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="stone_Gauntlet.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

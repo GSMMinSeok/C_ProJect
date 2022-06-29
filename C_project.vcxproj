@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClInclude Include="function.h" />
     <ClInclude Include="include.h" />
+    <ClInclude Include="stone_Gauntlet.h" />
     <ClInclude Include="stone.h" />
     <ClInclude Include="stone_design.h" />
     <ClInclude Include="stone_UI.h" />
