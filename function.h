@@ -12,4 +12,5 @@ void playingBgm();
 void Stone_Market();
 void Stone_Shop_1();
 void Stone_Shop_2();
+void Inventory();
 //인피니티 건틀렛 함수

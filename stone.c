@@ -17,6 +17,7 @@ int main() {
 	/*Gauntlet_After();
 	getch();*/
 	//Stone_Soul();
+	//Game_clear();
 	srand(time(NULL));
 	Game_Main();
 	Game_diffcult();
@@ -143,6 +144,7 @@ void Game_Start() {
 				switch (MenuNum) {
 				case 2:
 					While_out++;
+					MenuNum = 0;
 					Stone_Shop_1();
 					break;
 				case 1:
@@ -170,6 +172,10 @@ void Stone_Reinforce() {
 	gotoxy(10, 4);
 	printf(" %d", stone_item[1]);
 	Stone_pic();
+	gotoxy(102, 35);
+	printf("+%d강,%s                           성공확률:%d%%", stone_cnt,stone_name[stone_cnt], stone_rand_cnt[stone_cnt]);
+	gotoxy(102, 38);
+	printf("%s", stone_tell[stone_cnt]);
 	while (While_out == 0) {
 		if (_kbhit) {
 			key = getch();
@@ -204,14 +210,35 @@ void Stone_Reinforce() {
 						gotoxy(10, 3);
 						clear();
 						Stone_pic();
+						gotoxy(102, 35);
+						printf("+%d강,%s", stone_cnt, stone_name[stone_cnt]);
+						gotoxy(102, 38);
+						printf("%s", stone_tell[stone_cnt]);
+						gotoxy(102, 35);
+						printf("+%d강,%s                           성공확률:%d%%", stone_cnt, stone_name[stone_cnt], stone_rand_cnt[stone_cnt]);
+						gotoxy(7, 2);
+						printf("%lld\\", My_Gold);
+						gotoxy(10, 4);
+						printf(" %d", stone_item[1]);
+						CursorView();
 						break;
 					case 2:
 						Fast_Reinforce = 0;
-						//Stone_Reinforce2();
-						stone_cnt++;
+						Stone_Reinforce2();
 						gotoxy(40, 2);
 						clear();
 						Stone_pic();
+						gotoxy(102, 35);
+						printf("+%d강,%s", stone_cnt, stone_name[stone_cnt]);
+						gotoxy(102, 38);
+						printf("%s", stone_tell[stone_cnt]);
+						gotoxy(102, 35);
+						printf("+%d강,%s                           성공확률:%d%%", stone_cnt, stone_name[stone_cnt], stone_rand_cnt[stone_cnt]);
+						gotoxy(7, 2);
+						printf("%lld\\", My_Gold);
+						gotoxy(10, 4);
+						printf(" %d", stone_item[1]);
+						CursorView();
 						break;
 					case 3:
 						My_Gold += Gold[stone_cnt];
@@ -221,9 +248,19 @@ void Stone_Reinforce() {
 						gotoxy(30, 3);
 						clear();
 						Stone_pic();
+						gotoxy(102, 35);
+						printf("+%d강,%s", stone_cnt, stone_name[stone_cnt]);
+						gotoxy(102, 38);
+						printf("%s", stone_tell[stone_cnt]);
+						gotoxy(102, 35);
+						printf("+%d강,%s                           성공확률:%d%%", stone_cnt, stone_name[stone_cnt], stone_rand_cnt[stone_cnt]);
+						gotoxy(10, 4);
+						printf(" %d", stone_item[1]);
+						CursorView();
 						break;
 					case 4:
-						printf("미구현");
+						While_out++;
+						Inventory();
 						break;
 					case 5:
 						While_out++;
@@ -284,8 +321,12 @@ void Stone_Reinforce2() {
 void Stone_Soul() {
 	if (soul_visit == 0) {
 		stone_gauntlet_menu++;
-		printf("만나서 반가워 이건 선물");
+		for (int i = 0; soul_text[i] != '\0'; i++) {
+			printf("%c",soul_text[i]);
+			Sleep(100);
+		}
 		printf("+인피니티 건틀렛");
+		getch();
 	}
 	int cnt = 0;
 	while (cnt != 3) {
@@ -321,14 +362,14 @@ void Stone_Soul() {
 void Stone_Shop_1() {
 	gotoxy(0, 0);
 	shop_ui_2();
-	gotoxy(0, 10);
-	up_stone();
 	gotoxy(135, Stone_Y[MenuNum]);
-	printf("■■");
+	printf("■■■");
 	gotoxy(135, Stone_Y[MenuNum] + 1);
-	printf("■■");
+	printf("■■■");
+	gotoxy(135, Stone_Y[MenuNum] - 1);
+	printf("■■■");
+	protect();
 	int While_out = 0;
-	MenuNum = 0;
 	while (While_out == 0) {
 		if (_kbhit) {
 			key = getch();
@@ -338,26 +379,34 @@ void Stone_Shop_1() {
 					MenuNum--;
 				}
 				gotoxy(135, Stone_Y[MenuNum + 1]);
-				printf("□□");
+				printf("□□□");
 				gotoxy(135, Stone_Y[MenuNum + 1]+1);
-				printf("□□");
+				printf("□□□");
+				gotoxy(135, Stone_Y[MenuNum + 1] - 1);
+				printf("□□□");
 				gotoxy(135, Stone_Y[MenuNum]);
-				printf("■■");
+				printf("■■■");
 				gotoxy(135, Stone_Y[MenuNum]+1);
-				printf("■■");
+				printf("■■■");
+				gotoxy(135, Stone_Y[MenuNum] - 1);
+				printf("■■■");
 				break;
 			case 80://아래 방향키
 				if (MenuNum < 2) {
 					MenuNum++;
 				}
 				gotoxy(135, Stone_Y[MenuNum + -1]);
-				printf("□□");
+				printf("□□□");
 				gotoxy(135, Stone_Y[MenuNum + -1]+1);
-				printf("□□");
+				printf("□□□");
+				gotoxy(135, Stone_Y[MenuNum + -1] -1);
+				printf("□□□");
 				gotoxy(135, Stone_Y[MenuNum]);
-				printf("■■");
+				printf("■■■");
 				gotoxy(135, Stone_Y[MenuNum]+1);
-				printf("■■");
+				printf("■■■");
+				gotoxy(135, Stone_Y[MenuNum] - 1);
+				printf("■■■");
 				break;
 			case 13:
 				switch (MenuNum) {
@@ -393,7 +442,6 @@ void Stone_Shop_2() {
 	gotoxy(135, Stone_Y[MenuNum] + 1);
 	printf("■■");
 	int While_out = 0;
-	MenuNum = 0;
 	while (While_out == 0) {
 		if (_kbhit) {
 			key = getch();
@@ -447,6 +495,75 @@ void Stone_Shop_2() {
 		}
 	}
 }
+void Inventory() {
+	item();
+	for (int i = 0; i < 6; i++) {
+		gotoxy(66,item_Y[i]);
+		printf("%d", stone_item[i]);
+	}
+	int While_out = 0;
+	MenuNum = 0;
+	gotoxy(41, item_Y[MenuNum]);
+	printf("■");
+	while (While_out == 0) {
+		if (_kbhit) {
+			key = getch();
+			switch (key) {
+			case 72://위 방향키
+				if (MenuNum > 0) {
+					MenuNum--;
+				}
+				gotoxy(41, item_Y[MenuNum + 1]);
+				printf("□");
+				gotoxy(41, item_Y[MenuNum]);
+				printf("■");
+				break;
+			case 80://아래 방향키
+				if (MenuNum < 5) {
+					MenuNum++;
+				}
+				gotoxy(41, item_Y[MenuNum + -1]);
+				printf("□");
+				gotoxy(41, item_Y[MenuNum]);
+				printf("■");
+				break;
+			case 13:
+				switch (MenuNum) {
+				case 0:
+					break;
+				case 1:
+					break;
+				case 2:
+					While_out++;
+					stone_cnt = 6;
+					Stone_Reinforce();
+					break;
+				case 3:
+					While_out++;
+					stone_cnt = 10;
+					Stone_Reinforce();
+					break;
+				case 4:
+					While_out++;
+					stone_cnt = 12;
+					Stone_Reinforce();
+					break;
+				case 5:
+					While_out++;
+					stone_cnt = 15;
+					Stone_Reinforce();
+					break;
+				}
+				break;
+			case 27:
+				While_out++;
+				Stone_Reinforce();
+				break;
+			}
+
+		}
+	}
+}
 void Stone_pic() {
 	for (int i = 0; i < Print_Stone[stone_cnt]->i; i++) {
 		gotoxy(stone_prt_X[stone_cnt], stone_prt_Y[stone_cnt]+i);
@@ -454,8 +571,31 @@ void Stone_pic() {
 	}
 }
 void Game_clear() {
+	system("cls");
 	for (int i = 0; i < Print_Stone[stone_cnt]->i; i++) {
 		printf("%s\n", Print_Stone[stone_cnt]->pic[i]);
+	}
+	for (int i = 0; i < sizeof(minseok) - 1; i++) {
+		printf("%c", minseok[i]);
+		Sleep(100);
+	}
+	printf("\n>>");
+	char answer[999] = {0,};
+	gets(answer);
+
+	printf("\n");
+	for (int i = 0; i < sizeof(minseok) - 1; i++) {
+		printf("%c", minseok_1[i]);
+		Sleep(100);
+	}
+	for (int i = 0; i < 999; i++) {
+		if (answer[i] == '\0')break;
+		printf("%c", answer[i]);
+		Sleep(100);
+	}
+	for (int i = 0; i < sizeof(minseok) - 1; i++) {
+		printf("%c", minseok_2[i]);
+		Sleep(100);
 	}
 }
  

@@ -6,16 +6,16 @@
 #include<Windows.h>
 #include<conio.h>
 #include"stone.h"
-#include"stone_design.h"
 #include"function.h"
 #include"stone_UI.h"
+#include"stone_design.h"
 #include"stone_Gauntlet.h"
 #pragma comment (lib, "winmm.lib")
 #include <mmsystem.h>;
 
-#define UP "C:\\Users\\USER\\Documents\\C_project\\Music\\1.wav"
-#define SUCCES "C:\\Users\\USER\\Documents\\C_project\\Music\\SUCCES(2) (mp3cut.net).wav"
-#define FAIL "C:\\Users\\USER\\Documents\\C_project\\Music\\2.wav"
+#define UP "C:\\Users\\USER\\Documents\\C_ProJect\\Music\\1.wav"
+#define SUCCES "C:\\Users\\USER\\Documents\\C_ProJect\\Music\\SUCCES12.wav"
+#define FAIL "C:\\Users\\USER\\Documents\\C_ProJect\\Music\\2.wav"
 
 void delay(clock_t n)
 

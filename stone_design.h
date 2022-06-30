@@ -6,7 +6,7 @@ typedef struct pictures {
 Stone_design p0 = { 1, {"﹥" ,
 } };
 
-Stone_design p1 = { 1, {
+Stone_design p1 = { 2, {
          "               ﹥﹥               ",
          "               ﹥﹥                   ",
 } };
@@ -56,19 +56,19 @@ Stone_design p5 = { 10, {
 } };
 
 Stone_design p8 = { 13, {
-    "                         ﹥﹥﹥﹥﹥       ",
-    "                        ﹥        ﹥      ",
-    "                       ﹥ ﹥    ﹥  ﹥    ",
-    "                      ﹥   ﹥   ﹥   ﹥   ",
-    "                     ﹥      ﹥       ﹥  ",
-    "                    ﹥       ﹥﹥       ﹥",
-    "                   ﹥        ﹥ ﹥      ﹥",
-    "                  ﹥         ﹥    ﹥﹥ ﹥",
-    "                   ﹥      ﹥   ﹥      ﹥",
-    "                    ﹥   ﹥       ﹥   ﹥ ",
-    "                     ﹥ ﹥         ﹥ ﹥  ",
-    "                      ﹥            ﹥    ",
-    "                       ﹥﹥﹥﹥﹥﹥﹥     "
+    "                         ﹥﹥﹥﹥﹥                                          ",
+    "                        ﹥        ﹥                                     ",
+    "                       ﹥ ﹥    ﹥  ﹥                                   ",
+    "                      ﹥   ﹥   ﹥   ﹥                               ",
+    "                     ﹥      ﹥       ﹥                              ",
+    "                    ﹥       ﹥﹥       ﹥                           ",
+    "                   ﹥        ﹥ ﹥      ﹥                                   ",
+    "                  ﹥         ﹥    ﹥﹥ ﹥                          ",
+    "                   ﹥      ﹥   ﹥      ﹥                              ",
+    "                    ﹥   ﹥       ﹥   ﹥                              ",
+    "                     ﹥ ﹥         ﹥ ﹥                                  ",
+    "                      ﹥            ﹥                                     ",
+    "                       ﹥﹥﹥﹥﹥﹥﹥              "
 } };
 
 Stone_design p6 = { 12, {
@@ -329,7 +329,7 @@ Stone_design p17 = { 45, {
 "  RQBBBBBBBBBBBBBBBBBBBBBBBRRDgDRRQQBBBQBBBBBBBBBBBBBBBQBBBBBBBBBBBBBBBBBBBBBRc  "
 } };
 
-void up_stone() {
+void up_stone_6() {
     printf("     ﹥﹥﹥﹥﹥﹥﹥                                  \n");
     printf("   ﹥             ﹥                    \n");
     printf("  ﹥      ﹥﹥﹥    ﹥                         \n");
@@ -338,6 +338,76 @@ void up_stone() {
     printf(" ﹥       ﹥  ﹥      ﹥                     \n");
     printf(" ﹥       ﹥﹥﹥     ﹥                        \n");
     printf("  ﹥               ﹥﹥                          \n");
-    printf("  ﹥﹥﹥﹥﹥﹥﹥﹥﹥                    \n");
+    printf("    ﹥﹥﹥﹥﹥﹥﹥﹥                    \n");
   
 }
+void up_stone_10() {
+    printf("                ﹥﹥﹥﹥                 \n");
+    printf("              ﹥        ﹥﹥               \n");
+    printf("            ﹥              ﹥             \n");
+    printf("           ﹥   ﹥      ﹥  ﹥           \n");
+    printf("          ﹥      ﹥  ﹥    ﹥         \n");
+    printf("          ﹥        ﹥      ﹥         \n");
+    printf("          ﹥      ﹥  ﹥     ﹥         \n");
+    printf("          ﹥    ﹥      ﹥    ﹥         \n");
+    printf("           ﹥               ﹥         \n");
+    printf("            ﹥          ﹥﹥           \n");
+    printf("              ﹥﹥﹥﹥﹥               \n");
+    printf("                                       \n");
+
+}
+void up_stone_12() {
+    printf("             ﹥﹥﹥﹥﹥﹥                \n");
+    printf("           ﹥            ﹥              \n");
+    printf("         ﹥                ﹥            \n");
+    printf("       ﹥                    ﹥          \n");
+    printf("     ﹥                        ﹥        \n");
+    printf("   ﹥                            ﹥      \n");
+    printf("   ﹥﹤﹤﹤﹤﹤﹤﹤﹤﹤﹤﹤﹤﹤﹤﹥      \n");
+    printf("   ﹥   Ｄ  Ｄ  Ｄ  Ｄ  Ｄ   Ｄ  ﹥      \n");
+    printf("   ﹥   Ｄ  Ｄ  Ｄ  Ｄ  Ｄ   Ｄ  ﹥      \n");
+    printf("     ﹥                        ﹥        \n");
+    printf("       ﹥﹥﹥﹥﹥﹥﹥﹥﹥﹥﹥﹥          \n");
+}
+
+void up_stone_15() {
+    printf("                                   \n");
+    printf("                  ～               \n");
+    printf("                ﹥﹥﹥             \n");
+    printf("          灰--﹥﹥﹥﹥﹥--忖       \n");
+    printf("          太﹥ _------_ ﹥太       \n");
+    printf("          ﹥ _- _----_ -_ ﹥       \n");
+    printf("      ９﹥﹥_ -_ -_  _- _-﹥﹥Ⅱ   \n");
+    printf("          ﹥ -_ -_ _- _-  ﹥       \n");
+    printf("          太﹥ -_ - _-  ﹥太       \n");
+    printf("          戌--﹥﹥﹥﹥﹥--戎       \n");
+    printf("                ﹥﹥﹥             \n");
+    printf("                  ∪               \n");
+    printf("                                   \n");
+}
+
+void protect() {
+    gotoxy(10, 10);
+    printf("         ﹤﹥﹥﹥﹥﹥﹤           \n");
+    gotoxy(10, 11);
+    printf("          ﹥          ﹥          \n");
+    gotoxy(10, 12);
+    printf("           ﹥          ﹥         \n");
+    gotoxy(10, 13);
+    printf("            ﹥          ﹥        \n");
+    gotoxy(10, 14);
+    printf("             ﹥  ---    ﹥       \n");
+    gotoxy(10, 15);
+    printf("            ﹥  太+太  ﹥        \n");
+    gotoxy(10, 16);
+    printf("           ﹥    ---   ﹥         \n");
+    gotoxy(10, 17);
+    printf("          ﹥          ﹥          \n");
+    gotoxy(10, 18);
+    printf("           ﹥          ﹥         \n");
+    gotoxy(10, 19);
+    printf("            ﹥          ﹥        \n");
+    gotoxy(10, 20);
+    printf("             ﹤﹥﹥﹥﹥﹥﹤         \n");
+}
+
